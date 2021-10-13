@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneManager : MonoBehaviour
+public class Boton : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,9 +14,5 @@ public class SceneManager : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void ChangeScene(){
-        Debug.Log("Hola");
     }
 }
