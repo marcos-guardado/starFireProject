@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D shipRB;
     private float horizontal;
     private float vertical;
+    private float lastShoot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +24,10 @@ public class PlayerMovement : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && Time.time > lastShoot + 0.25f)
         {
             Shoot();
+            lastShoot = Time.time;
         }
     }
 

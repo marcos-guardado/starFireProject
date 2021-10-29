@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class BulletLogic : MonoBehaviour
 {
+    public GameObject bullet;
     public float speed;
     private Rigidbody2D rigibody2D;
     // Start is called before the first frame update
@@ -18,5 +20,16 @@ public class BulletLogic : MonoBehaviour
     void Update()
     {
         rigibody2D.velocity = Vector2.up * speed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        // Debug.Log("Toque nave enemiga");
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+            Destroy(bullet);
+        }
     }
 }
