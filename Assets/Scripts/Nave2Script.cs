@@ -16,6 +16,6 @@ public class Nave2Script : MonoBehaviour
     public void LoadScene(string scenename)
     {
         Debug.Log("sceneName to load: " + scenename);
-        // SceneManager.LoadScene(scenename);
+        SceneManager.LoadScene(scenename);
     }
 }

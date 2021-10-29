@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour
 {
+    public GameObject spawnObject;
+
     private void Start()
     {
-        Instantiate(PlayerStorage.playerPrefab, this.transform.position, this.transform.rotation);
+        
+        Instantiate(PlayerStorage.playerPrefab,spawnObject.transform.position, this.transform.rotation);
         Destroy(this.gameObject);
+        
     }
 }

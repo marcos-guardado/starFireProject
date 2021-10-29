@@ -8,7 +8,7 @@ public class SceneManagerScript : MonoBehaviour
 {
      public void LoadScene(string scenename)
     {
-        Debug.Log("sceneName to load: " + scenename);
+        // Debug.Log("sceneName to load: " + scenename);
         SceneManager.LoadScene(scenename);
     }
 }
