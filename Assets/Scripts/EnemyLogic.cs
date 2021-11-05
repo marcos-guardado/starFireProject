@@ -9,12 +9,17 @@ public class EnemyLogic : MonoBehaviour
     float timer = 0;
     int numbOfMovements = 0;
     float speed = 0.25f;
+
+    public GameObject bullet;
+    public Transform punto_instancia;
+    // public float fireRate = 0.5f;
+    private float tiempo;
     // Start is called before the first frame update
     void Start()
     {
 
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -31,6 +36,15 @@ public class EnemyLogic : MonoBehaviour
             transform.Translate(new Vector3(0, -1, 0));
             numbOfMovements = 0;
             speed = -speed;
+        }
+
+        tiempo += Time.deltaTime;
+        if (tiempo >= 2)
+        {
+            Instantiate(bullet, punto_instancia.position, Quaternion.identity);
+            tiempo = 0;
+            // nextFire = Time.time + fireRate;
+            //fire();
         }
     }
 }

@@ -40,4 +40,14 @@ public class PlayerMovement : MonoBehaviour
     {
         Instantiate(bulletPrefab, bulletSpawner.transform.position, Quaternion.identity);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        // Debug.Log("Toque nave enemiga");
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }

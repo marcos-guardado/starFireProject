@@ -175,3 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be6b622d6372464f825a3449b8ebc98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  punto_instancia: {fileID: 6145669017782918140}
+  bala: {fileID: 7087511804712951535, guid: e4513ae252c8ef14d843db52fbd994e6, type: 3}
+  tiempo: 0
