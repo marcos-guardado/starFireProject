@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -21,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         vertical = Input.GetAxisRaw("Vertical");
         horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -44,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        // Debug.Log("Toque nave enemiga");
         if (collision.gameObject.tag == "Enemy")
         {
             Destroy(collision.gameObject);

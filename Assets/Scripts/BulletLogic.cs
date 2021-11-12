@@ -29,6 +29,8 @@ public class BulletLogic : MonoBehaviour
         // Debug.Log("Toque nave enemiga");
         if (collision.gameObject.tag == "Enemy")
         {
+            ScoreScript.scoreValue += 10;
+
             Destroy(collision.gameObject);
             Destroy(bullet);
         }
