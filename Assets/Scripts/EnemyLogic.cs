@@ -8,6 +8,7 @@ public class EnemyLogic : MonoBehaviour
     float timeToMove = 0.5f;
     float timer = 0;
     int numbOfMovements = 0;
+    public int maxNumbOfMovements;
     float speed = 0.25f;
 
     public GameObject bullet;
@@ -31,9 +32,9 @@ public class EnemyLogic : MonoBehaviour
             numbOfMovements++;
         }
 
-        if (numbOfMovements == 40)
+        if (numbOfMovements == maxNumbOfMovements)
         {
-            transform.Translate(new Vector3(0, -1, 0));
+            transform.Translate(new Vector3(0, 1, 0));
             numbOfMovements = 0;
             speed = -speed;
         }
